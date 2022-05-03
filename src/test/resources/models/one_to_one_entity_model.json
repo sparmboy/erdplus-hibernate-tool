@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "www": "erdplus.com",
+  "shapes": [
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Wife",
+        "type": "regular",
+        "x": 811,
+        "y": 245,
+        "id": 2
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "is married to",
+        "isIdentifying": false,
+        "x": 613,
+        "y": 245,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 6
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 2
+          }
+        ],
+        "id": 3
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Husband",
+        "type": "regular",
+        "x": 443,
+        "y": 245,
+        "id": 6
+      }
+    }
+  ],
+  "connectors": [
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 5
+      },
+      "source": 2,
+      "destination": 3
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 7
+      },
+      "source": 6,
+      "destination": 3
+    }
+  ],
+  "width": 2000,
+  "height": 1000
+}

@@ -1,0 +1,122 @@
+{
+  "version": 2,
+  "www": "erdplus.com",
+  "shapes": [
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Shop",
+        "type": "regular",
+        "x": 356,
+        "y": 269,
+        "id": 1
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Product",
+        "type": "regular",
+        "x": 710,
+        "y": 268,
+        "id": 2
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "shop_id",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 356,
+        "y": 185,
+        "id": 3
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "product_id",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 710,
+        "y": 184,
+        "id": 5
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "stocked",
+        "isIdentifying": false,
+        "x": 541,
+        "y": 268,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 1
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 2
+          }
+        ],
+        "id": 7
+      }
+    }
+  ],
+  "connectors": [
+    {
+      "type": "Connector",
+      "details": {
+        "id": 8
+      },
+      "source": 3,
+      "destination": 1
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 9
+      },
+      "source": 5,
+      "destination": 2
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 8
+      },
+      "source": 1,
+      "destination": 7
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 9
+      },
+      "source": 2,
+      "destination": 7
+    }
+  ],
+  "width": 2000,
+  "height": 1000
+}

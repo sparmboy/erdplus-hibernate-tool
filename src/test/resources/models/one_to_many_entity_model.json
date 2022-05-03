@@ -1,0 +1,122 @@
+{
+  "version": 2,
+  "www": "erdplus.com",
+  "shapes": [
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Mother",
+        "type": "regular",
+        "x": 456,
+        "y": 176,
+        "id": 1
+      }
+    },
+    {
+      "type": "Entity",
+      "details": {
+        "name": "Child",
+        "type": "regular",
+        "x": 769,
+        "y": 176,
+        "id": 2
+      }
+    },
+    {
+      "type": "Relationship",
+      "details": {
+        "name": "has",
+        "isIdentifying": false,
+        "x": 617,
+        "y": 177,
+        "slots": [
+          {
+            "slotIndex": 0,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "one",
+            "role": "",
+            "entityId": 2
+          },
+          {
+            "slotIndex": 1,
+            "minimum": "",
+            "maximum": "",
+            "participation": "unspecified",
+            "cardinality": "many",
+            "role": "",
+            "entityId": 1
+          }
+        ],
+        "id": 3
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "mother_id",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 456,
+        "y": 92,
+        "id": 6
+      }
+    },
+    {
+      "type": "Attribute",
+      "details": {
+        "name": "child_id",
+        "isDerived": false,
+        "isMultivalued": false,
+        "isOptional": false,
+        "isComposite": false,
+        "isUnique": true,
+        "x": 769,
+        "y": 92,
+        "id": 8
+      }
+    }
+  ],
+  "connectors": [
+    {
+      "type": "Connector",
+      "details": {
+        "id": 9
+      },
+      "source": 6,
+      "destination": 1
+    },
+    {
+      "type": "Connector",
+      "details": {
+        "id": 10
+      },
+      "source": 8,
+      "destination": 2
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 0,
+        "id": 11
+      },
+      "source": 2,
+      "destination": 3
+    },
+    {
+      "type": "RelationshipConnector",
+      "details": {
+        "slotIndex": 1,
+        "id": 12
+      },
+      "source": 1,
+      "destination": 3
+    }
+  ],
+  "width": 2000,
+  "height": 1000
+}
